@@ -19,7 +19,13 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
         onAddPlace({
             name,
             link
-        })
+        },
+        handleInputsClean())
+    }
+
+    function handleInputsClean() {
+        setName('');
+        setLink('');
     }
 
     return (

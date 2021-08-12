@@ -17,7 +17,7 @@ function App() {
     const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
     const [selectedCard, setSelectedCard] = React.useState({ isOpen: false, name: '', link: '', _id: '' });
     const [cards, setCards] = React.useState([]);
-    const [currentUser, setCurrentUser] = React.useState('');
+    const [currentUser, setCurrentUser] = React.useState({});
 
     React.useEffect(() => {   
         Promise.all([api.getUserInfo(), api.getInitialCards()])
